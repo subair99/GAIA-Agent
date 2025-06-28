@@ -18,3 +18,5 @@ pgvector
 python-dotenv
 pytesseract
 matplotlib
+sentence-transformers
+itsdangerous

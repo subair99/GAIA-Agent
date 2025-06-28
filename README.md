@@ -53,32 +53,44 @@ hf_oauth_expiration_minutes: 480
 
 
 ## **Installation**
+Create a UV environment with:
+
+'''bash
+uv venv --python 3.11   # Use python 3.11
+'''
+
+After the instalation is complete activate the environment:
+
+'''bash
+.venv\Scripts\activate   # Windows
+
+source .venv/bin/activate    # macOS amd Linux
+'''
+
+
 Clone the repository, change the current working directory to this repository's root folder:
 
-```
-git clone https://github.com/fisherman611/gaia-agent.git
-```
-```
-cd gaia-agent
+```bash
+git clone https://github.com/subair99/GAIA-Agent.git
 ```
 
-Install ```requirements.txt``` (replace `3.11` with your installed Python version):
+Install ```requirements.txt``` :
 
-```
-py -3.11 -m pip install -r requirements.txt
+```bash
+uv pip install -r requirements.txt
 ```
 
 ## **Environment Variables**
 Store some API keys an variables in the `.env` file and load it in your code using `load_dotenv`
 
 ```
-SUPABASE_URL=...
-SUPABASE_SERVICE_ROLE_KEY=...
-SUPABASE_SERVICE_KEY=...
-HUGGINGFACEHUB_API_TOKEN=...
-GROQ_API_KEY=...
-TAVILY_API_KEY=...
-LANGSMITH_API_KEY=...
+SUPABASE_URL=xxxxxx
+SUPABASE_SERVICE_ROLE_KEY=xxxxxx
+SUPABASE_SERVICE_KEY=xxxxxx
+HUGGINGFACEHUB_API_TOKEN=xxxxxx
+GROQ_API_KEY=xxxxxx
+TAVILY_API_KEY=xxxxxx
+LANGSMITH_API_KEY=xxxxxx
 
 LANGSMITH_TRACING=true
 LANGSMITH_PROJECT=ai_agent_course
@@ -86,11 +98,13 @@ LANGSMITH_ENDPOINT=https://api.smith.langchain.com
 ```
 
 ## **Demo**
-To run the application using the command line, use the following command (replace `3.11` with your installed Python version):
+To run the application using the command line, use the following command:
+
+```bash
+uv run app.py
 ```
-py -3.11 app.py
-```
-Or run in the [Hugging Face Space](https://huggingface.co/spaces/fisherman611/gaia-agent)
+
+Or run in the [Hugging Face Space](https://huggingface.co/spaces/AbdulKabir/GAIA-Agen)
 ## **Resources**
 - [GAIA Benchmark](https://huggingface.co/spaces/gaia-benchmark/leaderboard)
 - [Hugging Face Agents Course](https://huggingface.co/agents-course)
