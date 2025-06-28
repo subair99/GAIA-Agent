@@ -16,4 +16,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push -f https://AbdulKabir:$HF_TOKEN@huggingface.co/spaces/AbdulKabir/GAIA-Agent main
+        run: git push -f https://subair9:$HF_TOKEN@huggingface.co/spaces/subair9/GAIA-Agent main
