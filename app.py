@@ -1,44 +1,4 @@
-Hugging Face's logo
-Hugging Face
-Models
-Datasets
-Spaces
-Community
-Docs
-Pricing
 
-
-
-Spaces:
-
-fisherman611
-/
-gaia-agent
-
-
-like
-10
-App
-Files
-Community
-4
-gaia-agent
-/
-app.py
-
-Luong Huu Thanh
-Update app.py
-25d6f5a
-about 2 months ago
-raw
-
-Copy download link
-history
-blame
-contribute
-delete
-
-9.13 kB
 """ Basic Agent Evaluation Runner"""
 import os
 import inspect
