@@ -10,6 +10,39 @@ from langchain_core.messages import HumanMessage
 from agent import build_graph
 
 
+import subprocess
+import sys
+import os
+
+def install_requirements(requirements_file="requirements.txt"):
+    """
+    Installs packages listed in a requirements file using pip.
+
+    Args:
+        requirements_file (str): The path to the requirements.txt file.
+    """
+    if not os.path.exists(requirements_file):
+        print(f"Error: '{requirements_file}' not found.")
+        return
+
+    try:
+        print(f"Installing packages from {requirements_file}...")
+        # Use sys.executable to ensure the correct pip for the current Python environment is used
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", requirements_file])
+        print("Packages installed successfully.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error installing packages: {e}")
+        print(f"Output: {e.output.decode('utf-8') if e.output else 'No output'}")
+        print(f"Error Output: {e.stderr.decode('utf-8') if e.stderr else 'No error output'}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+if __name__ == "__main__":
+    # You can specify the requirements file directly, or use the default "requirements.txt"
+    # For example, if your requirements file is named "my_dependencies.txt":
+    # install_requirements("my_dependencies.txt")
+    install_requirements()
+
 
 # (Keep Constants as is)
 # --- Constants ---

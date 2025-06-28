@@ -55,17 +55,17 @@ hf_oauth_expiration_minutes: 480
 ## **Installation**
 Create a UV environment with:
 
-'''bash
+```bash
 uv venv --python 3.11   # Use python 3.11
-'''
+```
 
 After the instalation is complete activate the environment:
 
-'''bash
+```bash
 .venv\Scripts\activate   # Windows
 
 source .venv/bin/activate    # macOS amd Linux
-'''
+```
 
 
 Clone the repository, change the current working directory to this repository's root folder:
